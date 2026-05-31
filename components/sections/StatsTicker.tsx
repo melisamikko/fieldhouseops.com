@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Stat {
   prefix: string
@@ -37,10 +37,11 @@ const slides = [
   },
 ]
 
-function StatItem({ stat, animKey }: { stat: Stat; animKey: number }) {
+function StatItem({ stat, animKey, shouldAnimate }: { stat: Stat; animKey: number; shouldAnimate: boolean }) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
+    if (!shouldAnimate) return
     setCount(0)
     const duration = 2500
     const target = stat.value
@@ -57,7 +58,7 @@ function StatItem({ stat, animKey }: { stat: Stat; animKey: number }) {
 
     rafId = requestAnimationFrame(animate)
     return () => cancelAnimationFrame(rafId)
-  }, [animKey, stat.value])
+  }, [animKey, stat.value, shouldAnimate])
 
   const display = stat.currency ? count.toLocaleString() : count
 
@@ -76,14 +77,46 @@ function StatItem({ stat, animKey }: { stat: Stat; animKey: number }) {
 export default function StatsTicker() {
   const [active, setActive] = useState(0)
   const [animKey, setAnimKey] = useState(0)
+  const [hasEntered, setHasEntered] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
 
+  // Detect when the section scrolls into view
   useEffect(() => {
-    const id = setInterval(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasEntered) {
+          setHasEntered(true)
+          setAnimKey((prev) => prev + 1) // kick off count animation for first slide
+        }
+      },
+      { threshold: 0.4 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [hasEntered])
+
+  // Only start auto-advancing after the section is visible,
+  // with an initial delay so the user can read "The Problem Right Now"
+  useEffect(() => {
+    if (!hasEntered) return
+    let intervalId: ReturnType<typeof setInterval>
+
+    const timeoutId = setTimeout(() => {
       setActive((prev) => (prev + 1) % slides.length)
       setAnimKey((prev) => prev + 1)
-    }, 10000)
-    return () => clearInterval(id)
-  }, [])
+      intervalId = setInterval(() => {
+        setActive((prev) => (prev + 1) % slides.length)
+        setAnimKey((prev) => prev + 1)
+      }, 10000)
+    }, 8000) // 8 seconds to read the first slide before advancing
+
+    return () => {
+      clearTimeout(timeoutId)
+      clearInterval(intervalId)
+    }
+  }, [hasEntered])
 
   const { label, stats } = slides[active]
 
@@ -93,7 +126,7 @@ export default function StatsTicker() {
   }
 
   return (
-    <section className="bg-[#EDEDEF] py-14 sm:py-16">
+    <section ref={sectionRef} className="bg-[#EDEDEF] py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#888] mb-6">
           {label}
@@ -101,7 +134,7 @@ export default function StatsTicker() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
           {stats.map((stat, i) => (
-            <StatItem key={i} stat={stat} animKey={animKey} />
+            <StatItem key={i} stat={stat} animKey={animKey} shouldAnimate={hasEntered} />
           ))}
         </div>
 
