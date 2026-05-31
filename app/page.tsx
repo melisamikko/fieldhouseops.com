@@ -3,6 +3,7 @@ import PainPoints from '@/components/sections/PainPoints'
 import PlugAndPlay from '@/components/sections/PlugAndPlay'
 import Platforms from '@/components/sections/Platforms'
 import HowItWorks from '@/components/sections/HowItWorks'
+import FAQ from '@/components/sections/FAQ'
 import CTASection from '@/components/sections/CTASection'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <PainPoints />
       <Platforms />
       <HowItWorks />
+      <FAQ />
       <CTASection />
     </>
   )
