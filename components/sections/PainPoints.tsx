@@ -21,14 +21,14 @@ const points = [
 
 export default function PainPoints() {
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted mb-12">
           Sound familiar?
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {points.map(({ icon: Icon, title, body }) => (
-            <Card key={title} className="bg-background border-border">
+            <Card key={title} className="bg-surface border-border">
               <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                 <Icon size={18} className="text-accent" />
               </div>

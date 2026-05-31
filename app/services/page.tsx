@@ -7,7 +7,7 @@ import CTASection from '@/components/sections/CTASection'
 export const metadata: Metadata = {
   title: 'Services — Fieldhouse Ops',
   description:
-    'Done-for-you sales automation and CRM setup, or hands-on training. We specialize in GoHighLevel and HubSpot.',
+    'Done-for-you sales automation and CRM setup. We specialize in GoHighLevel and HubSpot.',
 }
 
 const dfyDetails = [
@@ -41,14 +41,6 @@ const flowSteps = [
   'You Close the Deal',
 ]
 
-const teachOutcomes = [
-  'A fully documented SOP for your automation system',
-  'Hands-on training in GHL or HubSpot',
-  'Campaign templates and workflow blueprints',
-  'A working automation you can manage in-house',
-  'Continued access to support and Q&A',
-]
-
 export default function ServicesPage() {
   return (
     <>
@@ -63,8 +55,8 @@ export default function ServicesPage() {
             <span className="text-accent">Built for Your Business</span>
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
-            We specialize in two things: building automated sales systems inside GoHighLevel and
-            HubSpot, and teaching you how to run them yourself.
+            We build automated sales systems inside GoHighLevel and HubSpot — from first click to
+            booked appointment.
           </p>
         </div>
       </section>
@@ -118,39 +110,6 @@ export default function ServicesPage() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="rounded-2xl border border-border bg-surface p-10 order-2 lg:order-1">
-              <p className="text-primary font-semibold text-sm mb-6">What you'll walk away with:</p>
-              <ul className="space-y-4">
-                {teachOutcomes.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                    <span className="text-accent shrink-0 font-bold">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="order-1 lg:order-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-                We Teach You
-              </span>
-              <h2 className="text-4xl font-bold text-primary mt-3 mb-6">
-                Learn to Own
-                <br />
-                Your Automation
-              </h2>
-              <p className="text-muted leading-relaxed">
-                Prefer to run things in-house? We'll train you and your team to build, manage, and
-                scale your automation yourself. Custom sessions, real walkthroughs, and templates
-                you keep forever.
-              </p>
             </div>
           </div>
         </div>

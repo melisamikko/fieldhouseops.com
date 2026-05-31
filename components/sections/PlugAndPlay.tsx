@@ -1,19 +1,12 @@
-import { Plug } from 'lucide-react'
 import { integrations } from '@/lib/integrations'
 
 export default function PlugAndPlay() {
   return (
-    <section id="integrations" className="py-24 bg-background">
+    <section id="integrations" className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 mb-5">
-            <Plug size={22} className="text-accent" aria-hidden />
-          </div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
-            Plug-and-Play
-          </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
-            Works With the Tools You Already Use
+            Plug-and-Play
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto leading-relaxed">
             We connect your field service platform and GoHighLevel into one automated system —
@@ -35,7 +28,7 @@ export default function PlugAndPlay() {
         <p className="text-center text-sm text-muted mt-10 max-w-xl mx-auto">
           Don&apos;t see your platform?{' '}
           <span className="text-primary font-medium">
-            We integrate with most tools via API, Zapier, or Make.
+            We integrate with 1000&apos;s more.
           </span>
         </p>
       </div>
