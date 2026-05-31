@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { Geist, Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
@@ -8,6 +8,13 @@ import Footer from '@/components/layout/Footer'
 const geist = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+})
+
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  style: ['italic'],
+  weight: ['400', '700'],
 })
 
 export const metadata: Metadata = {
@@ -32,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full antialiased`}>
+    <html lang="en" className={`${geist.variable} ${playfair.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-background text-primary">
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -29,7 +29,7 @@ const tracks = [
 
 export default function Platforms() {
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">

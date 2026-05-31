@@ -34,3 +34,8 @@ body {
 .glow-accent:hover {
   box-shadow: 0 0 35px rgba(249, 115, 22, 0.5);
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

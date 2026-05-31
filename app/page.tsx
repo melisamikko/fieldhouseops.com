@@ -1,5 +1,5 @@
 import Hero from '@/components/sections/Hero'
-import PainPoints from '@/components/sections/PainPoints'
+import StatsTicker from '@/components/sections/StatsTicker'
 import PlugAndPlay from '@/components/sections/PlugAndPlay'
 import Platforms from '@/components/sections/Platforms'
 import HowItWorks from '@/components/sections/HowItWorks'
@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatsTicker />
       <PlugAndPlay />
-      <PainPoints />
       <Platforms />
       <HowItWorks />
       <FAQ />

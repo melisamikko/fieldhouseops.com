@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
+import TypewriterRole from '@/components/ui/TypewriterRole'
 
 export default function Hero() {
   return (
@@ -15,8 +16,8 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center py-24">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-          Do you want to{' '}
-          <span className="text-accent">scale your business?</span>
+          <span className="block">Your <TypewriterRole /></span>
+          <span className="block">is <span className="text-accent">ready.</span></span>
         </h1>
 
         <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
