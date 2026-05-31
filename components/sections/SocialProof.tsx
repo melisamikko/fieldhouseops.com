@@ -12,7 +12,7 @@ export default function SocialProof() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map(({ value, label }) => (
             <div key={label}>
-              <div className="text-3xl sm:text-4xl font-bold gradient-text-accent mb-1">{value}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-1">{value}</div>
               <div className="text-sm text-muted">{label}</div>
             </div>
           ))}

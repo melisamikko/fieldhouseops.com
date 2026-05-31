@@ -6,14 +6,14 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="font-bold text-sm tracking-widest text-white uppercase">Fieldhouse Ops</p>
+            <p className="font-bold text-sm tracking-widest text-primary uppercase">Fieldhouse Ops</p>
             <p className="text-muted text-sm mt-1">AI Enablement & Sales Automation</p>
           </div>
 
           <div className="flex items-center gap-8">
-            <Link href="/" className="text-sm text-muted hover:text-white transition-colors">Home</Link>
-            <Link href="/services" className="text-sm text-muted hover:text-white transition-colors">Services</Link>
-            <Link href="/about" className="text-sm text-muted hover:text-white transition-colors">About</Link>
+            <Link href="/" className="text-sm text-muted hover:text-primary transition-colors">Home</Link>
+            <Link href="/services" className="text-sm text-muted hover:text-primary transition-colors">Services</Link>
+            <Link href="/about" className="text-sm text-muted hover:text-primary transition-colors">About</Link>
           </div>
 
           <a

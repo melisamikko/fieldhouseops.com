@@ -19,7 +19,7 @@ export default function CTASection({
       </div>
       <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">{title}</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">{title}</h2>
           <p className="text-lg text-muted max-w-xl mx-auto">{subtitle}</p>
         </div>
         <GHLEmbed type="calendar" embedCode={embedCode} height={700} />

@@ -55,14 +55,14 @@ function Track({
           {badge}
         </span>
       </div>
-      <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
+      <h3 className="text-2xl font-bold text-primary mb-3">{title}</h3>
       <p className="text-muted text-sm leading-relaxed mb-6">{description}</p>
       <ul className="space-y-3 flex-1">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-3 text-sm text-white/80">
+          <li key={item} className="flex items-start gap-3 text-sm text-primary/80">
             <Check
               size={15}
-              className={cn('mt-0.5 shrink-0', accent ? 'text-accent' : 'text-cyan')}
+              className={cn('mt-0.5 shrink-0', accent ? 'text-accent' : 'text-primary')}
             />
             {item}
           </li>
@@ -82,7 +82,7 @@ export default function ServiceTracks() {
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
             Two Ways to Work With Us
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">

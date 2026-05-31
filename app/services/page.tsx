@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CheckCircle } from 'lucide-react'
+import PlugAndPlay from '@/components/sections/PlugAndPlay'
 import Platforms from '@/components/sections/Platforms'
 import CTASection from '@/components/sections/CTASection'
 
@@ -56,10 +57,10 @@ export default function ServicesPage() {
           <div className="w-[700px] h-[300px] bg-accent/8 blur-[100px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-6">
             Full-Funnel Automation,
             <br />
-            <span className="gradient-text-accent">Built for Your Business</span>
+            <span className="text-accent">Built for Your Business</span>
           </h1>
           <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
             We specialize in two things: building automated sales systems inside GoHighLevel and
@@ -75,7 +76,7 @@ export default function ServicesPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                 Done For You
               </span>
-              <h2 className="text-4xl font-bold text-white mt-3 mb-6">
+              <h2 className="text-4xl font-bold text-primary mt-3 mb-6">
                 We Build the Machine.
                 <br />
                 You Work the Pipeline.
@@ -90,7 +91,7 @@ export default function ServicesPage() {
                   <li key={title} className="flex items-start gap-3">
                     <CheckCircle size={18} className="text-accent mt-0.5 shrink-0" />
                     <div className="text-sm">
-                      <span className="font-semibold text-white">{title}</span>
+                      <span className="font-semibold text-primary">{title}</span>
                       <span className="text-muted"> — {desc}</span>
                     </div>
                   </li>
@@ -109,7 +110,7 @@ export default function ServicesPage() {
                       <div className="w-8 h-8 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent text-xs font-bold shrink-0">
                         {i + 1}
                       </div>
-                      <div className="text-white font-medium text-sm">{step}</div>
+                      <div className="text-primary font-medium text-sm">{step}</div>
                     </div>
                     {i < flowSteps.length - 1 && (
                       <div className="ml-4 mt-1 w-px h-4 bg-accent/20" />
@@ -126,21 +127,21 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-2xl border border-border bg-surface p-10 order-2 lg:order-1">
-              <p className="text-white font-semibold text-sm mb-6">What you'll walk away with:</p>
+              <p className="text-primary font-semibold text-sm mb-6">What you'll walk away with:</p>
               <ul className="space-y-4">
                 {teachOutcomes.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted">
-                    <span className="text-cyan shrink-0 font-bold">✓</span>
+                    <span className="text-accent shrink-0 font-bold">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="order-1 lg:order-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-cyan">
+              <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                 We Teach You
               </span>
-              <h2 className="text-4xl font-bold text-white mt-3 mb-6">
+              <h2 className="text-4xl font-bold text-primary mt-3 mb-6">
                 Learn to Own
                 <br />
                 Your Automation
@@ -155,6 +156,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <PlugAndPlay />
       <Platforms />
       <CTASection />
     </>

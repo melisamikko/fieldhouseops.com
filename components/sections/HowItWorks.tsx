@@ -33,20 +33,20 @@ export default function HowItWorks() {
           <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
             The Process
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">How It Works</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary">How It Works</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, i) => (
             <div key={step.number} className="relative">
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-accent/40 to-transparent z-0" />
+                <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-accent/30 z-0" />
               )}
               <div className="relative z-10 bg-surface border border-border rounded-xl p-6">
                 <div className="text-4xl font-bold text-accent/30 font-mono mb-4">
                   {step.number}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
+                <h3 className="text-lg font-bold text-primary mb-2">{step.title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{step.description}</p>
               </div>
             </div>

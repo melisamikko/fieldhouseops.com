@@ -15,10 +15,10 @@ export default function AboutPage() {
           <div className="w-[500px] h-[400px] bg-cyan/5 blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-6">
             Built for the People
             <br />
-            <span className="gradient-text-accent">Who Hate Busywork</span>
+            <span className="text-accent">Who Hate Busywork</span>
           </h1>
           <p className="text-xl text-muted leading-relaxed">
             Fieldhouse Ops exists because too many businesses are losing deals to slow follow-up,
@@ -37,7 +37,7 @@ export default function AboutPage() {
             </p>
             <p>
               Our model is simple:{' '}
-              <span className="text-white font-medium">
+              <span className="text-primary font-medium">
                 we do it for you, or we teach you how
               </span>
               . Either way, you end up with a working automation system that fills your pipeline
@@ -57,7 +57,7 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
               Let's Talk About Your Business
             </h2>
             <p className="text-lg text-muted max-w-xl mx-auto">
@@ -72,7 +72,7 @@ export default function AboutPage() {
       <section className="py-20 bg-surface border-t border-border">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Prefer to Send a Message?</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Prefer to Send a Message?</h2>
             <p className="text-muted">
               Use the form below or email us directly at{' '}
               <a

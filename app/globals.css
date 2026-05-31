@@ -1,47 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0A0A0F;
-  --color-surface: #111118;
-  --color-border: #1E1E2E;
-  --color-accent: #6366F1;
-  --color-accent-hover: #4F46E5;
-  --color-cyan: #06B6D4;
-  --color-muted: #94949F;
+  --color-background: #F4F6F9;
+  --color-surface: #FFFFFF;
+  --color-border: #D8DEE6;
+  --color-primary: #1B2A4A;
+  --color-secondary: #5C6B7A;
+  --color-muted: #6B7B8C;
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-highlight: #FFD100;
+  --color-cyan: #1B2A4A;
   --font-sans: var(--font-geist-sans);
 }
 
 body {
-  background-color: #0A0A0F;
-  color: #ffffff;
+  background-color: #F4F6F9;
+  color: #1B2A4A;
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(27, 42, 74, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 42, 74, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .glow-accent {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.35);
 }
 
 .glow-accent:hover {
-  box-shadow: 0 0 35px rgba(99, 102, 241, 0.55);
-}
-
-.gradient-text-accent {
-  background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #94949F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  box-shadow: 0 0 35px rgba(249, 115, 22, 0.5);
 }
