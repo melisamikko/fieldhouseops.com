@@ -69,7 +69,7 @@ function Track({
         ))}
       </ul>
       <div className="mt-8">
-        <Button href="/about#book" variant={accent ? 'primary' : 'ghost'} className="w-full">
+        <Button href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49" variant={accent ? 'primary' : 'ghost'} className="w-full">
           Get Started
         </Button>
       </div>

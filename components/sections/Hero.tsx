@@ -23,7 +23,7 @@ export default function Hero() {
           AI-powered operations for small businesses that are ready to scale without hiring.
         </p>
 
-        <Button href="/about#book" size="lg" className="uppercase tracking-wider">
+        <Button href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49" size="lg" className="uppercase tracking-wider">
           I&apos;m ready to scale
         </Button>
       </div>
