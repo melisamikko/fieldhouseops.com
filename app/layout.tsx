@@ -50,6 +50,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data-widget-id="6a1babff1b5a98ef9d79293d"
           strategy="afterInteractive"
         />
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZF6QZ3X8XB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZF6QZ3X8XB');
+          `}
+        </Script>
       </body>
     </html>
   )
