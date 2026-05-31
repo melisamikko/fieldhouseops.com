@@ -65,7 +65,16 @@ export default function AboutPage() {
               exactly what we'd build.
             </p>
           </div>
-          <GHLEmbed type="calendar" height={700} />
+          <div className="text-center">
+            <a
+              href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-accent text-white font-semibold text-lg px-10 py-4 rounded-xl hover:bg-accent/90 transition-colors"
+            >
+              Book a Free Strategy Call
+            </a>
+          </div>
         </div>
       </section>
 

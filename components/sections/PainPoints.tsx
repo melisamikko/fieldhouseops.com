@@ -1,9 +1,9 @@
-import { Clock, AlertTriangle, TrendingDown } from 'lucide-react'
+import { PhoneMissed, AlertTriangle, TrendingDown } from 'lucide-react'
 import Card from '@/components/ui/Card'
 
 const points = [
   {
-    icon: Clock,
+    icon: PhoneMissed,
     title: 'Leads Going Cold',
     body: 'Manual follow-up is slow. By the time you reach out, your prospect has already moved on to someone else.',
   },
@@ -23,9 +23,12 @@ export default function PainPoints() {
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted mb-12">
+        <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted mb-4">
           Sound familiar?
         </p>
+        <h2 className="text-4xl sm:text-5xl font-bold text-primary text-center mb-12">
+          Why Most Businesses Stay Stuck
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {points.map(({ icon: Icon, title, body }) => (
             <Card key={title} className="bg-surface border-border">

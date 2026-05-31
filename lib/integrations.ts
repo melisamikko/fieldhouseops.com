@@ -17,5 +17,6 @@ export const integrations: Integration[] = [
   { name: 'Service Fusion', category: 'Field Service', logo: '/integrations/service-fusion.png' },
   { name: 'Improveit360', category: 'Field Service', logo: '/integrations/improveit360.png' },
   { name: 'JobTread', category: 'Field Service', logo: '/integrations/jobtread.png' },
+  { name: 'HubSpot', category: 'Automation', logo: '/integrations/hubspot.svg' },
   { name: 'GHL', category: 'Automation', logo: '/integrations/ghl.jpg' },
 ]

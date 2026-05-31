@@ -1,52 +1,53 @@
 const steps = [
   {
-    number: '01',
-    title: 'Audit',
+    number: 1,
+    title: 'Business Analysis',
     description:
-      'We analyze your current sales process and identify exactly where automation will have the biggest impact.',
+      'We analyze your current processes, lead sources, team structure, and service areas to create your automation blueprint.',
   },
   {
-    number: '02',
-    title: 'Build',
+    number: 2,
+    title: 'CRM Connection',
     description:
-      'We build your complete automation stack inside GoHighLevel or HubSpot — funnels, workflows, sequences.',
+      'Seamlessly connect your existing CRM and calendar systems with our platform for unified data management.',
   },
   {
-    number: '03',
-    title: 'Launch',
+    number: 3,
+    title: 'AI Training',
     description:
-      "We run the campaigns, ads, and nurture sequences. Your pipeline starts filling. You don't lift a finger.",
+      'We configure your AI agents with your FAQs, pricing, service areas, and brand voice for authentic interactions.',
   },
   {
-    number: '04',
-    title: 'Hand Off',
+    number: 4,
+    title: 'Launch & Optimize',
     description:
-      'Appointments land on your calendar. You work your pipeline and do the job. We stay on standby.',
+      'Go live with monitoring and continuous optimization of prompts, routing, and performance metrics.',
   },
 ]
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-24 bg-background bg-grid relative">
+      <div className="absolute inset-0 bg-black/[0.07] pointer-events-none" />
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
             The Process
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-primary">How It Works</h2>
+          <p className="text-muted text-lg mt-4 max-w-2xl mx-auto">
+            A simple, structured process so you know what's happening every step of the way.
+          </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, i) => (
+          {steps.map((step) => (
             <div key={step.number} className="relative">
-              {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-accent/30 z-0" />
-              )}
-              <div className="relative z-10 bg-surface border border-border rounded-xl p-6">
-                <div className="text-4xl font-bold text-accent/30 font-mono mb-4">
-                  {step.number}
+              <div className="relative h-full bg-surface border border-border rounded-2xl p-8 flex flex-col items-center text-center group hover:border-accent/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
+                <div className="w-14 h-14 rounded-2xl bg-accent flex items-center justify-center mb-6 shrink-0 shadow-lg shadow-accent/25 group-hover:shadow-accent/45 transition-shadow duration-300">
+                  <span className="text-2xl font-bold text-white">{step.number}</span>
                 </div>
-                <h3 className="text-lg font-bold text-primary mb-2">{step.title}</h3>
+                <h3 className="text-lg font-bold text-primary mb-3">{step.title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{step.description}</p>
               </div>
             </div>

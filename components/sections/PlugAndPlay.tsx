@@ -9,7 +9,7 @@ export default function PlugAndPlay() {
             Plug-and-Play
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-            We connect your field service platform and GoHighLevel into one automated system —
+            We connect your field service platform into one automated system —
             no rip-and-replace, no starting from scratch.
           </p>
         </div>
