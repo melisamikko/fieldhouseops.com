@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <section className="relative py-24 overflow-hidden bg-background bg-grid">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[500px] h-[400px] bg-cyan/5 blur-[120px]" />
+          <div className="w-[500px] h-[400px] bg-primary/5 blur-[120px]" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-6">

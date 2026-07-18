@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
   style: ['italic'],
-  weight: ['400', '700'],
+  weight: ['700'],
 })
 
 export const metadata: Metadata = {
