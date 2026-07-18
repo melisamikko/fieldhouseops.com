@@ -1,13 +1,14 @@
 import Link from 'next/link'
+import BrandLogo from '@/components/layout/BrandLogo'
 
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="font-bold text-sm tracking-widest text-primary uppercase">Fieldhouse Ops</p>
-            <p className="text-muted text-sm mt-1">AI Enablement & Sales Automation</p>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <BrandLogo height={32} />
+            <p className="text-muted text-sm">AI Enablement & Sales Automation</p>
           </div>
 
           <div className="flex items-center gap-8">
