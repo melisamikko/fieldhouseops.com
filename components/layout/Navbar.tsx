@@ -21,7 +21,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border bg-surface/90 backdrop-blur-md shadow-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
-          <BrandLogo height={28} priority />
+          <BrandLogo height={40} priority />
 
           <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
             {links.map(({ label, href }) => (

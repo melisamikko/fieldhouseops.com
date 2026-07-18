@@ -2,9 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
+const INTRINSIC_WIDTH = 615
+const INTRINSIC_HEIGHT = 127
+
 type BrandLogoProps = {
   className?: string
-  /** Image height in pixels; width scales with aspect ratio */
+  /** Display height in pixels; width scales with aspect ratio */
   height?: number
   priority?: boolean
 }
@@ -14,8 +17,6 @@ export default function BrandLogo({
   height = 32,
   priority = false,
 }: BrandLogoProps) {
-  const width = Math.round(height * (615 / 127))
-
   return (
     <Link
       href="/"
@@ -25,10 +26,12 @@ export default function BrandLogo({
       <Image
         src="/fieldhouse-ops-logo.png"
         alt="Fieldhouse Ops"
-        width={width}
-        height={height}
+        width={INTRINSIC_WIDTH}
+        height={INTRINSIC_HEIGHT}
         className="w-auto"
         style={{ height }}
+        quality={100}
+        unoptimized
         priority={priority}
       />
     </Link>
