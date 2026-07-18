@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Button from '@/components/ui/Button'
+import BookingButton from '@/components/ui/BookingButton'
 import TypewriterRole from '@/components/ui/TypewriterRole'
 
 export default function Hero() {
@@ -24,9 +24,7 @@ export default function Hero() {
           AI-powered operations for small businesses that are ready to scale without hiring.
         </p>
 
-        <Button href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49" size="lg" className="uppercase tracking-wider">
-          I&apos;m ready to scale
-        </Button>
+        <BookingButton>Let&apos;s Talk</BookingButton>
       </div>
     </section>
   )

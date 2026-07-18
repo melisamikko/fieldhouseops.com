@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react'
-import Button from '@/components/ui/Button'
+import BookingButton from '@/components/ui/BookingButton'
 import { cn } from '@/lib/utils'
 
 const dfyItems = [
@@ -69,9 +69,7 @@ function Track({
         ))}
       </ul>
       <div className="mt-8">
-        <Button href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49" variant={accent ? 'primary' : 'ghost'} className="w-full">
-          Get Started
-        </Button>
+        <BookingButton className="w-full justify-between">Get Started</BookingButton>
       </div>
     </div>
   )

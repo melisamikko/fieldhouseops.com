@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import BookingButton from '@/components/ui/BookingButton'
 import GHLEmbed from '@/components/ui/GHLEmbed'
 
 export const metadata: Metadata = {
@@ -66,14 +67,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="text-center">
-            <a
-              href="https://api.leadconnectorhq.com/widget/booking/AbI2CP9wUW3wzclGFr49"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-accent text-white font-semibold text-lg px-10 py-4 rounded-xl hover:bg-accent/90 transition-colors"
-            >
-              Book a Free Strategy Call
-            </a>
+            <BookingButton>Book a Free Strategy Call</BookingButton>
           </div>
         </div>
       </section>

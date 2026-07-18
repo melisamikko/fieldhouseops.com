@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import BrandLogo from '@/components/layout/BrandLogo'
+import BookingButton from '@/components/ui/BookingButton'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -38,13 +39,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          <button
-            className="md:hidden text-muted hover:text-primary transition-colors"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-3">
+            <BookingButton size="sm" className="hidden md:inline-flex">
+              Let&apos;s Talk
+            </BookingButton>
+            <button
+              className="md:hidden text-muted hover:text-primary transition-colors"
+              onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
 
         {open && (
@@ -62,6 +68,9 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
+            <BookingButton size="sm" className="w-full justify-between">
+              Let&apos;s Talk
+            </BookingButton>
           </div>
         )}
       </nav>
