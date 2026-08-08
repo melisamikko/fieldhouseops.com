@@ -9,12 +9,13 @@
   --color-muted: #6B7B8C;
   --color-accent: #F97316;
   --color-accent-hover: #EA580C;
+  --color-inverse: #001f3f;
   --font-sans: var(--font-geist-sans);
 }
 
 body {
-  background-color: #F4F6F9;
-  color: #1B2A4A;
+  background-color: var(--color-background);
+  color: var(--color-primary);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
@@ -36,4 +37,11 @@ body {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[blink_1s_ease-in-out_infinite\] {
+    animation: none;
+    opacity: 1;
+  }
 }

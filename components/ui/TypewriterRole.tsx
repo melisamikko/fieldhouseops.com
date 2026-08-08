@@ -59,7 +59,7 @@ export default function TypewriterRole() {
     >
       {displayed}
       <span
-        className="inline-block w-[2px] bg-white ml-1 align-middle animate-[blink_1s_ease-in-out_infinite]"
+        className="inline-block w-[2px] bg-primary ml-1 align-middle animate-[blink_1s_ease-in-out_infinite] motion-reduce:animate-none"
         style={{ height: '0.85em' }}
       />
     </span>

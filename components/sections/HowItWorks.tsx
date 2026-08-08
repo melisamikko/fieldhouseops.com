@@ -28,7 +28,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 bg-background bg-grid relative">
-      <div className="absolute inset-0 bg-black/[0.07] pointer-events-none" />
+      <div className="absolute inset-0 bg-primary/[0.04] pointer-events-none" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">

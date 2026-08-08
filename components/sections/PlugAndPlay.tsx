@@ -2,7 +2,7 @@ import { integrations } from '@/lib/integrations'
 
 export default function PlugAndPlay() {
   return (
-    <section id="integrations" className="py-24 bg-white">
+    <section id="integrations" className="py-24 bg-surface">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">

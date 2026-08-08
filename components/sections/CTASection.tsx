@@ -11,7 +11,7 @@ export default function CTASection({
     "Book a free 30-minute strategy call. We'll audit your current process and show you exactly what we'd automate — no pitch, no pressure.",
 }: Props) {
   return (
-    <section id="book" className="py-24 relative overflow-hidden bg-[#001f3f]">
+    <section id="book" className="py-24 relative overflow-hidden bg-inverse">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[800px] h-[400px] bg-accent/5 blur-[100px] rounded-full" />
       </div>
